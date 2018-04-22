@@ -9,31 +9,8 @@
 
 </head>
 <body style="display: flex; justify-content:center;align-items:center;height:100vh;">
-	<div class="container">
-
-		<div class="search-wrapper card z-depth-2" style="margin-left: 10px;width: 400px;">
-			<form action="/search" method="get">
-				<input id="summoner" type="text" name="summoner" placeholder="Entrez un nom d'invocateur"><i class="material-icons">search</i>
-				<div class="search-results"></div>
-			</form>
-		</div>
-
-		<div class="row" id="main-card-app" >
-			<div class="col s12 m7">
-				<div class="card" style="width:400px;">
-					<div class="card-content">
-						<span class="card-title">{{ info.name }}</span>
-						<ul class="collection">
-							<li class="collection-item">Id : {{ info.id }} </li>
-							<li class="collection-item">Level : {{ info.level }}</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
-
+	
+{{{ body }}}
 
 
 	<style>	
