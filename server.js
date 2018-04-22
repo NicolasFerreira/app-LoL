@@ -66,6 +66,7 @@ app.get('/search', function(req, res) {
     });
 });
 
+var searchForm = '<p>coucou</p>';
 
 
 
