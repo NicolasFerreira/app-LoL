@@ -14,7 +14,7 @@ app.get('/', function(req, res){
 
 app.get('/search', function(req, res) {
   var data = {};
-  var api_key = 'RGAPI-6d1e59a6-58de-4d44-b66a-8414749bf712';
+  var api_key = 'RGAPI-e952c342-2137-4b79-95d0-212498b472d7';
   var recherche = req.query.summoner.toLowerCase();
   var serveur = 'euw1';
 
@@ -43,10 +43,17 @@ app.get('/search', function(req, res) {
       request(URL, function(err, response, body) {
         if(!err && response.statusCode == 200) {
           var json = JSON.parse(body);
-          console.log(json[0]);
-          data.tier = json[0].tier;
-          data.rank = json[0].rank;
-          data.lp = json[0].leaguePoints;
+          for (var i = json.length - 1; i >= 0; i--) {
+            if (json[i].queueType === "RANKED_SOLO_5x5"){
+              console.log(json[i]);
+              data.tier = json[i].tier;
+              data.rank = json[i].rank;
+              data.lp = json[i].leaguePoints;
+              data.wins = json[i].wins;
+              data.losses = json[i].losses;
+              data.winrate = ((json[i].wins/(json[i].wins+json[i].losses))*100).toFixed(2); // winrate soloqueu en %
+            }
+          }
           callback(null, data);
         } else {
           console.log(err);
