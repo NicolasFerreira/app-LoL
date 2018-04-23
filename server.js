@@ -7,6 +7,8 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 
 app.set('view engine', 'handlebars');
 
+app.use(express.static('public'));
+
 app.get('/', function(req, res){
   res.render('index');
 });
@@ -68,14 +70,13 @@ app.get('/search', function(req, res) {
       }
 
       res.render('search', {
-        info: data
+        info: data,   // données du joeur recherché
+        ddversion: "8.8.1" //version du site ddragon , banque d'images LoL
       });
     });
 });
 
-var searchForm = '<p>coucou</p>';
 
 
-
-var port = Number(process.env.PORT || 3000);
+var port = Number(process.env.PORT || 3030);
 app.listen(port);

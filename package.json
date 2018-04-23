@@ -9,7 +9,14 @@
     "express-handlebars": "^3.0.0",
     "request": "^2.85.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-sass": "^4.0.1",
+    "minify": "^3.0.5",
+    "sass": "^1.2.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"

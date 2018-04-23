@@ -1,0 +1,20 @@
+html body header{
+	 height: 60px;
+	 display:flex;
+	 justify-content:space-between;
+	 align-items:center;
+	 padding:0 5%;
+
+	 .form-control{
+	 	border-radius:0;
+	 }
+	
+	h2{
+		color:white;
+	}
+	form{
+		height:38px;
+		width: 300px;
+	}
+}
+

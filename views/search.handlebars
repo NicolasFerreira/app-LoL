@@ -1,29 +1,23 @@
-<div class="container" style="width: 400px;">
-
-	
-	<form action="/search" method="get">
-		<div class="form-group">
-			<input  class="form-control" id="summoner" type="text" name="summoner" placeholder="Entrez un nom d'invocateur">
-
+<section id="left">	
+	<div id="left-top">
+		<div id="left-top-img">
+			<img src="http://ddragon.leagueoflegends.com/cdn/{{ddversion}}/img/profileicon/{{ info.img }}.png " alt="icons-summoner" >
+			<span id="level-joueur">{{ info.level }}</span>
 		</div>
-	
-	</form>
-
-	<div class="row" id="main-card-app" >
-		<div class="col s12 m7">
-			<div class="card" style="width:400px;">
-				<div class="card-content">
-					<img src="http://ddragon.leagueoflegends.com/cdn/8.5.2/img/profileicon/{{ info.img }}.png " alt="icons-summoner" style="width:100px;">
-					<span class="card-title">{{ info.name }}</span>
-					<ul class="collection">
-						<li class="collection-item">Id : {{ info.id }} </li>
-						<li class="collection-item">Level : {{ info.level }}</li>
-						<li class="collection-item">Rang : {{ info.tier }} {{ info.rank }} ------->   LP : {{ info.lp }}</li>
-						<li class="collection-item">Wins : {{ info.wins }} | Losses : {{ info.losses }} | Winrate : {{ info.winrate }} % </li>
-					</ul>
-				</div>
-			</div>
+			<h2 class="card-title">{{ info.name }}</h2>
+	</div>
+	<div id="left-bottom" class="z-depth-1">
+			<h3>SoloQ</h3>
+		<div id="left-bottom-top">
+			<ul class="collection">
+				<img src="http://localhost:3030/dist/img/tier-icons/base-icons/{{ info.tier }}.png " alt="icons-rank" >
+				
+				<li class="collection-item">Rang : {{ info.tier }} {{ info.rank }} ------->   LP : {{ info.lp }}</li>
+				<li class="collection-item">Wins : {{ info.wins }} | Losses : {{ info.losses }} | Winrate : {{ info.winrate }} % </li>
+			</ul>
 		</div>
 	</div>
-
-</div>
+</section>
+<section id="right">
+	
+</section>
