@@ -7,10 +7,7 @@
 
 ``` bash
 # install dependencies
-npm install async
-npm install express
-npm install express-handlebars
-npm install -g nodemon
+npm install 
 
 # To run your script
 nodemon server.js
