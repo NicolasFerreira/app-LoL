@@ -2,6 +2,8 @@
 
 > Creation d'une app de statistiques pour les joueurs du jeu League of Legends.
 
+> Nodejs / Express / Sass / Gulp
+
 
 ## Build Setup
 
