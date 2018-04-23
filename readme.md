@@ -7,7 +7,7 @@
 
 ``` bash
 # install dependencies
-npm install 
+npm install
 
 # To run your script
 nodemon server.js
